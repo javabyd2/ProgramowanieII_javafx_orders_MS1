@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sdabyd2.javafx.orders.controller.ItemController">
+   <children>
+      <Button fx:id="buttonApply" layoutX="470.0" layoutY="200.0" mnemonicParsing="false" onAction="#onActionButtonApply" text="Zatwierdź" />
+      <Button fx:id="buttonCancel" layoutX="401.0" layoutY="200.0" mnemonicParsing="false" onAction="#onActionButtonCancel" text="Anuluj" />
+      <Label layoutX="23.0" layoutY="56.0" text="Nazwa przedmiotu" />
+      <Label layoutX="143.0" layoutY="125.0" text="Ilość" />
+      <Spinner fx:id="spinnerQuantity" amountToStepBy="1" initialValue="0" layoutX="143.0" layoutY="142.0" max="1000" min="0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="23.0" layoutY="125.0" text="Kwota jednostkowa" />
+      <TextField fx:id="textFieldPrice" alignment="CENTER_RIGHT" editable="false" layoutX="23.0" layoutY="142.0" prefHeight="25.0" prefWidth="100.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="262.0" layoutY="125.0" text="Kwota" />
+      <TextField fx:id="textFieldValue" alignment="CENTER_RIGHT" editable="false" layoutX="262.0" layoutY="142.0" prefHeight="25.0" prefWidth="82.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="361.0" layoutY="125.0" text="Rabat" />
+      <TextField fx:id="textFieldRebat" alignment="CENTER_RIGHT" editable="false" layoutX="361.0" layoutY="142.0" prefHeight="25.0" prefWidth="59.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="438.0" layoutY="125.0" text="Kwota po rabacie" />
+      <TextField fx:id="textFieldValueWithRebate" alignment="CENTER_RIGHT" editable="false" layoutX="438.0" layoutY="142.0" prefHeight="25.0" prefWidth="100.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <ComboBox fx:id="comboBoxProduct" layoutX="23.0" layoutY="73.0" prefHeight="25.0" prefWidth="514.0" />
+      <VBox prefHeight="38.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="38.0">
+               <children>
+                  <Label fx:id="textFieldTitle" text="NOWY PRZEDMIOT ZAMÓWIENIA">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
